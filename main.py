@@ -76,6 +76,17 @@ size_downloaded = input('Size downloaded: ')
 
 langs = input('Language(s): ')
 
+
+language_changable_in_settings = input('Can language be changed in settings? Type (Y,y) or (N,n): ')
+
+
+new_line = '\n'
+
+if language_changable_in_settings.lower() == 'y':
+    lang_change_str = "- Language can be changed in game settings"
+else:
+    lang_change_str = None
+
 credit = input('Whom to thank for crack ? : ')
 
 steam_data = get_details_from_steam_url(steam_url)
@@ -96,9 +107,7 @@ json_data = {
 [Torrent]({torrent_link})
 
 **Downloads**
-{f'[AnonymousFiles]({anonymousfiles_link})' if anonymousfiles_link else ''}
-{f'[FileDitch]({fileditch_link})' if fileditch_link else ''}
-{f'[PixelDrain]({pixeldrain_link})' if pixeldrain_link else ''}
+{new_line+f'[AnonymousFiles]({anonymousfiles_link})' if anonymousfiles_link else ''}{new_line+f'[FileDitch]({fileditch_link})' if fileditch_link else ''}{new_line+f'[PixelDrain]({pixeldrain_link})' if pixeldrain_link else ''}
 
 **Instructions:**
 1:Download game
@@ -110,8 +119,7 @@ Enjoy the game!
 **Info**
 - Based on: {based_on}
 - Size after extraction: {size_after_extraction}
-- Size downloaded: {size_downloaded}
-- Language can be changed in game settings
+- Size downloaded: {size_downloaded}{new_line + lang_change_str if lang_change_str else ''}
 - Language(s): {langs}
 
 *Thanks to {credit} for crack.*
