@@ -106,8 +106,7 @@ json_data = {
 **Torrent** *(Not recommended to use Utorrent, or Bittorrent)*
 [Torrent]({torrent_link})
 
-**Downloads**
-{new_line+f'[AnonymousFiles]({anonymousfiles_link})' if anonymousfiles_link else ''}{new_line+f'[FileDitch]({fileditch_link})' if fileditch_link else ''}{new_line+f'[PixelDrain]({pixeldrain_link})' if pixeldrain_link else ''}
+**Downloads**{new_line+f'[AnonymousFiles]({anonymousfiles_link})' if anonymousfiles_link else ''}{new_line+f'[FileDitch]({fileditch_link})' if fileditch_link else ''}{new_line+f'[PixelDrain]({pixeldrain_link})' if pixeldrain_link else ''}
 
 **Instructions:**
 1:Download game
